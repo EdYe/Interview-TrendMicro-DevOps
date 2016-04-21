@@ -5,7 +5,7 @@ The homework of DevOps team
 
 Optional work (Bonus, free to answer)
 
-1. Using free AWS account and point a DNS name to your apache/nginx (http) server and show your application, the application can use first question showing phpinfo or any application you want to use. HINT: you can usetwbbs.org or dot.tk or any free domain vender you found, you can register a free domain name there.
+1. Using free AWS account and point a DNS name to your apache/nginx (http) server and show your application, the application can use first question showing phpinfo or any application you want to use. HINT: you can use twbbs.org or dot.tk or any free domain vender you found, you can register a free domain name there.
 
 2. Containerize question 1 VM/Machine as a container image. Target: we can just run up the image then can access the apache/nginx (http) server (If can using Chef/Ansible to deploy will be better)
 

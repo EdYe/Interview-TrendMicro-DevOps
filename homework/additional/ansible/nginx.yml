@@ -1,0 +1,19 @@
+---
+- name: install nginx 
+  hosts: localhost 
+  become: true
+  tasks:
+    - name: create nginx repository
+      template:
+        src=nginx.repo.j2
+        dest=/etc/yum.repos.d/nginx.repo
+    - name: install nginx
+      yum:
+        name=nginx
+        state=present
+        update_cache=yes
+    - name: launch nginx
+      service:
+        name=nginx
+        state=restarted
+        enabled=true

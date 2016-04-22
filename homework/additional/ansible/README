@@ -1,0 +1,13 @@
+Use Ansible playbooks to finish the homework
+
+homework.sh - run this shell script to execute the playbooks.
+hosts - Ansible host file
+index.php - showing PHP info and used by the playbook phpinfo.yml
+nginx.default.conf - Nginx default settings to pass PHP request to PHP-FPM
+nginx.repo.j2 - template file used by the playbook nginx.yml
+nginx.yml - install Nginx
+nginx_php.yml - set up PHP settings on Nginx virtual host config
+php.yml - install PHP-FPM
+phpinfo.yml - Copy index.php to the default path of Nginx web service
+README - this file. 
+

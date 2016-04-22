@@ -1,0 +1,15 @@
+---
+- name: Create the page to show PHP info 
+  hosts: localhost
+  become: true
+  vars:
+    path: /usr/share/nginx/html/index.php
+  tasks:
+    - name: upload the file, index.php, to the server 
+      copy:  
+        src=index.php
+        dest={{ path }}
+        owner=root
+        group=root
+        mode=644
+        backup=yes

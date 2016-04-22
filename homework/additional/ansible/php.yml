@@ -1,0 +1,29 @@
+---
+- name: Install PHP 
+  hosts: localhost
+  become: true
+  tasks:
+    - name: install remi repo
+      yum:
+        name={{ item }}
+        state=present
+        update_cache=yes
+      with_items:
+        - http://dl.fedoraproject.org/pub/epel/6/i386/epel-release-6-7.noarch.rpm
+        - http://rpms.famillecollet.com/enterprise/remi-release-6.rpm
+    - name: install PHP-FPM
+      yum:
+        name=php-fpm
+        enablerepo=remi
+        state=present
+        update_cache=yes
+    - name: configure PHP (cgi.fix_pathinfo=0)
+      replace:
+        dest=/etc/php.ini
+        regexp=';cgi.fix_pathinfo=1'
+        replace='cgi.fix_pathinfo=0'
+    - name: restart PHP
+      service:
+        name=php-fpm
+        state=restarted
+        enabled=true

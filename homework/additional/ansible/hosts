@@ -1,0 +1,3 @@
+[server]
+localhost ansible_connection=local
+stage ansible_ssh_host=10.32.251.115 ansible_ssh_user=apuser ansible_ssh_pass=123456

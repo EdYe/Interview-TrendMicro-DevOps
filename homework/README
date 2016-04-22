@@ -1,0 +1,7 @@
+The homework is finished on CentOS 7. Following are the deliveries as requested.
+
+default.conf - Nginx virtual host config which is under the path /etc/nginx/conf.d/default.conf on CentOS 7
+index.php - the PHP code to show phpinfo
+php.ini - the PHP config which is under the path /etc/php.ini on CentOS 7.
+README - this file.
+ScreenShot.jpg - the screen shot of the phpinfo page. The complete content is in additional/phpinfo.html

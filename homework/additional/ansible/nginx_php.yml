@@ -1,0 +1,20 @@
+---
+- name: Configure PHP settings on Nginx virtual host config
+  hosts: localhost
+  become: true
+  vars:
+    path: /etc/nginx/conf.d/default.conf
+  tasks:
+    - name: replace the default settings of nginx virtual host 
+      copy:  
+        src=nginx.default.conf
+        dest={{ path }}
+        owner=root
+        group=root
+        mode=644
+        backup=yes
+    - name: restart nginx
+      service:
+        name=nginx
+        state=restarted
+        enabled=true

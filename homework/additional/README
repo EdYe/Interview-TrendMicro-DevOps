@@ -1,0 +1,4 @@
+Extra files which are not requested as deliveries.
+
+ansible - contains the shell script and the Ansible playbooks to finish this homework.
+phpinfo.html - provide the complete content of the phpinfo page.
